@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive HTML Page</title>
+    <script>
+      // JavaScript function to toggle visibility of content
+      function toggleContent() {
+        var content = document.getElementById("toggleContent");
+        if (content.style.display === "none") {
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Interactive Web Page</h1>
+    </header>
+
+    <section>
+      <h2>Welcome to Our Interactive Page</h2>
+      <p>
+        This is an example of an HTML page with dynamic behavior using
+        JavaScript.
+      </p>
+
+      <!-- Button to toggle content visibility -->
+      <button onclick="toggleContent()">Show/Hide More Content</button>
+
+      <!-- The content that will be toggled -->
+      <div id="toggleContent" style="display: none">
+        <h3>More Content Revealed!</h3>
+        <p>
+          This content was hidden initially, but now you can see it after
+          clicking the button. You can use JavaScript to dynamically show or
+          hide content like this to make your page more interactive.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Interactive Page. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

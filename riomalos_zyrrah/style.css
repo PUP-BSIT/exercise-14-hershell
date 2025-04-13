@@ -1,0 +1,215 @@
+body {
+  background-color: #4d315863;
+  margin: 0;
+}
+
+.header {
+  background: url("./image/header.png");
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+h2 {
+  font-style: italic;
+  text-align: center;
+  margin: 10px;
+}
+
+a {
+  color: black;
+}
+
+.hobbies,
+.works,
+.testimonial,
+.gallery {
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgba(197, 82, 201, 0.274);
+}
+
+.gallery img {
+  height: 200px;
+  width: 200px;
+}
+
+.gallery-grid {
+  text-align: center;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+.contact-container,
+.goal-section {
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgba(197, 82, 201, 0.274);
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin: 10px 20px 5px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
+}
+
+fieldset {
+  display: flex;
+  padding: 1rem;
+  margin: 1rem;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.comment-form form input,
+.comment-form form textarea,
+.forms input,
+.forms textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 5px 0px;
+  border: 1px solid;
+  border-radius: 5px;
+  color: black;
+}
+
+.for-copy {
+  display: flex;
+}
+
+.sort-buttons button,
+.contact-container form button {
+  padding: 0.75rem;
+  background-color: #4d3158;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.comment-form form button {
+  padding: 0.75rem;
+  background-color: #4d3158;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 50%;
+  pointer-events: none;
+}
+
+.sort-buttons button:hover,
+.contact-container form button:hover,
+.comment-form form button:hover {
+  background-color: #3b253f;
+}
+
+.comment-form button.enabled {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.goal {
+  margin: 10px;
+  padding: 10px;
+  background: #e8b9dff8;
+  border-left: 10px solid #c921f3;
+  border-radius: 5px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .header {
+    padding: 5px;
+  }
+
+  div h2 {
+    font-size: 1.5em;
+  }
+
+  .hobbies,
+  .works,
+  .testimonial,
+  .gallery {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+
+  .forms {
+    flex-direction: column;
+  }
+
+  fieldset {
+    border-radius: 5px;
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    align-items: center;
+  }
+
+  .contact-container form,
+  .comment-form form {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+
+  .forms input,
+  .forms textarea,
+  .comment-form form input,
+  .comment-form form textarea {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .forms button,
+  .comment-form form button {
+    padding: 0.5rem;
+    width: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 776px) {
+  .contact-container,
+  .comment-form {
+    padding: 0.5rem;
+  }
+
+  .contact-container form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .goal-section {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+
+  .comment-form form {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+}

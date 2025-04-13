@@ -1,0 +1,176 @@
+body {
+  background: linear-gradient(rgb(185, 228, 245), rgb(50, 156, 197));
+}
+
+.header {
+  background: url("image/small_1989_10f5cd51d4.png");
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+.hobbies,
+.works {
+  border: 1px solid #007bff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.testimonials {
+  border: 1px solid #007bff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.gallery {
+  border: 1px solid #007bff;
+  padding: 15px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #dde5f8, #193d99);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery > img {
+  height: 300px;
+  width: 600px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.contact button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.contact button:hover {
+  background: #0056b3;
+}
+
+.goals,
+.contact {
+  border: 2px solid #007bff;
+  background: linear-gradient(135deg, #dff6ff, #91c9f7);
+  padding: 20px;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+}
+
+.contact form,
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment-form input,
+.comment-form textarea,
+.contact input,
+.contact textarea {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #f0f8ff;
+}
+
+.comment-form textarea,
+.contact textarea {
+  resize: none;
+  height: 80px;
+}
+
+.comment-form button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+  width: 60%;
+  font-weight: bold;
+}
+
+.comment-form button:hover {
+  background: #0056b3;
+}
+
+.comment-form button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.group-comment {
+  text-align: center;
+}
+
+#sort_button {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 8px 15px;
+  border: none;
+  background-color: #4991de;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#sort_button:hover {
+  background-color: #3583d7;
+}
+
+@media (max-width: 800px) {
+  .header {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery img {
+    width: 90%;
+  }
+
+  form {
+    width: 90%;
+  }
+}

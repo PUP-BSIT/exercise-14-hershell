@@ -1,0 +1,128 @@
+body {
+  background-image: url(images/background.gif);
+  align-items: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-size: cover;
+  margin: 0;
+}
+
+.header {
+  background-image: url(images/header.jpg);
+  width: 100 vw;
+  border: 5px solid rgba(113, 57, 52, 0.133);
+  text-align: center;
+}
+
+h2 {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+div {
+  max-width: 50%;
+  border-radius: 10px;
+  margin: 1rem auto;
+}
+
+.interest,
+.works,
+.testimonials,
+.goals,
+.comment-section {
+  justify-items: center;
+  border: 5px solid rgba(113, 57, 52, 0.133);
+  background-color: rgba(147, 51, 51, 0.133);
+  max-width: 60%;
+}
+
+.gallery {
+  padding: 1rem;
+  justify-items: center;
+  border: 5px solid rgba(113, 57, 52, 0.133);
+  background-color: rgba(147, 51, 51, 0.133);
+  max-width: 80%;
+  text-align: center;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.contact-form {
+  justify-items: center;
+  align-items: center;
+  border: 5px solid rgba(113, 57, 52, 0.133);
+  background-color: rgba(147, 51, 51, 0.133);
+  max-width: 40%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin: 10px 0 5px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.name-container {
+  max-width: 100%;
+  display: flex;
+  margin-bottom: 8px;
+  gap: 3px;
+}
+
+.email,
+.message {
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button:enabled {
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.add-comment {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  border: 5px solid rgba(113, 57, 52, 0.133);
+  background-color: rgba(147, 51, 51, 0.133);
+  max-width: 50%;
+}
+
+.comment_form {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  gap: 1rem;
+}
+
+@media (max-width: 425px) {
+  .name-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .header h1 {
+    font-size: 1.2rem;
+  }
+}

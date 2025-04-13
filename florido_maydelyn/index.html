@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>floridomaydelynPage</title>
+    <link href="style.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <div class="body">
+      <div class="background">
+        <div class="title">
+          <h1>Florido, Maydelyn</h1>
+        </div>
+      </div>
+
+      <div id="interest_hobbies">
+        <h2>My interest and hobbies</h2>
+        <ul>
+          <li>watching anime</li>
+          <li>reading manhwa</li>
+          <li>reading manga</li>
+          <li>playing mind games</li>
+          <li>sleeping</li>
+        </ul>
+      </div>
+
+      <div id="works">
+        <h2>My works</h2>
+        <ol>
+          <li><a href="./htmlfile1.html" target="_blank">work one</a></li>
+          <li><a href="./htmlfile2.html" target="_blank">work two</a></li>
+          <li><a href="./htmlfile3.html" target="_blank">work three</a></li>
+          <li><a href="./htmlfile4.html" target="_blank">work four</a></li>
+          <li><a href="./htmlfile5.html" target="_blank">work five</a></li>
+        </ol>
+      </div>
+
+      <div id="testemonials">
+        <h2>Testemonials</h2>
+        <p>I love your design! -Steph</p>
+        <p>Maydelyn's ideas are always fresh! -Riomalos</p>
+        <p>
+          Maydelyn always combines technical skill with responsible work ethic.
+              -Siervo
+        </p>
+      </div>
+
+      <div id="gallery">
+        <h2>Gallery</h2>
+        <img src="images/meow.jpg" alt="cat"/>
+        <img src="images/meow.jpg" alt="cat"/>
+        <img src="images/meow.jpg" alt="cat"/>
+        <img src="images/meow.jpg" alt="cat"/>
+        <img src="images/meow.jpg" alt="cat"/>
+        <img src="images/meow.jpg" alt="cat"/>
+      </div>
+
+      <div class="form">
+        <form>
+          <h2>Contact Me</h2>
+          <div class="wrapper">
+            <div class="item1">
+              <label for="email">E-mail:</label>
+              <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="example@example.com"
+                  required/>
+            </div>
+
+            <div class="item2">
+              <label for="name">Name:</label>
+              <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  required/>
+            </div>
+
+            <div class="item3">
+              <label for="age">Age:</label>
+              <input
+                  type="number"
+                  name="age"
+                  id="age"
+                  placeholder="Enter your age"
+                  required/>
+            </div>
+
+            <div class="item4">
+              <label for="subject">Subject:</label>
+              <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Enter the subject"
+                  required/>
+            </div>
+
+            <div class="item5">
+              <label for="copy">send me a copy</label>
+              <input type="checkbox" name="copy" id="copy"/>
+            </div>
+
+            <div class="item6">
+              <label for="message">Message:</label>
+              <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="5"
+                  placeholder="Enter your message"
+                  required></textarea>
+            </div>
+
+            <div class="item7">
+              <button type="button">submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="goals">
+        <h2>My Goals</h2>
+        <ul>
+          <li>to graduate college</li>
+          <li>to master at least one programming language</li>
+          <li>to have a stable job</li>
+          <li>to be rich</li>
+        </ul>
+
+        <div class="comment">
+          <div class="comments">
+            <h3>Comments</h3>
+
+            <select id="sort_toggle">
+              <option value="">Sort by:</option>
+              <option value="ascending">Ascending</option>
+              <option value="descending">Descending</option>
+            </select>
+
+            <div id="groupmate-comments">
+              <p>I hope you reach all your goals! - Durante</p>
+              <p>
+                These goals are fantastic and show that you’re focused on
+                    achieving success! -Riomalos
+              </p>
+              <p>Take your time for your success. -Siervo</p>
+            </div>
+          </div>
+
+          <form class="comment-form">
+            <h3>Comment</h3>
+            <label for="comment_name">Name:</label>
+            <input
+                type="text"
+                id="comment_name"
+                name="name"
+                placeholder="Enter your name"
+                required/>
+
+            <label for="comment">Comment:</label>
+            <textarea
+                id="comment"
+                name="comment"
+                rows="5"
+                placeholder="Enter your comment here..."
+                required></textarea>
+
+            <button
+                id="comment_button"
+                type="button"
+                onclick="addElement()"
+                disabled>
+              Comment
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

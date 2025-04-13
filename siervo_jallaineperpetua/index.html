@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
+    <title>SiervoJallainePage</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>Siervo Jallaine Perpetua</h1>
+    </div>
+
+    <div class="hobbies">
+      <h2>My interests and hobbies</h2>
+      <ul>
+        <li>reading books</li>
+        <li>watching tv</li>
+        <li>working chores</li>
+        <li>singing</li>
+        <li>listening to Taylor Swift</li>
+      </ul>
+    </div>
+
+    <div class="works">
+      <h2>My works</h2>
+      <ol>
+        <li><a href="try.html" target="blank">Initial Work</a></li>
+        <li><a href="dynamic_form.html" target="blank">Forms</a></li>
+        <li><a href="table.html" target="blank">Table</a></li>
+        <li><a href="static.html" target="blank">Webpage</a></li>
+        <li><a href="toggle.html" target="blank">Toggle example</a></li>
+      </ol>
+    </div>
+
+    <div class="testimonials">
+      <h2>Testimonials</h2>
+      <p>Looks simple yet stylish! -Steph</p>
+      <p>
+        Florido: Jallaine is incredibly resourceful, always finding creative
+            solutions and making the most of every opportunity with
+            intelligence and adaptability.
+      </p>
+      <p>Jallaine makes everything look amazing and easy! -Riomalos</p>
+    </div>
+
+    <div class="gallery">
+      <h2>Gallery</h2>
+      <img src="image/small_1989_10f5cd51d4.png"/>
+      <img src="image/small_1989_10f5cd51d4.png"/>
+      <img src="image/small_1989_10f5cd51d4.png"/>
+      <img src="image/small_1989_10f5cd51d4.png"/>
+      <img src="image/small_1989_10f5cd51d4.png"/>
+      <img src="image/small_1989_10f5cd51d4.png"/>
+    </div>
+
+    <div class="contact">
+      <h2>Contact Me</h2>
+      <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Name" required/>
+        <input type="email" name="email" placeholder="Email" required/>
+        <input type="text" name="subject" placeholder="Subject" required/>
+        <textarea
+            name="message"
+            rows="5"
+            placeholder="Message"
+            required></textarea>         
+        <button type="button">Send Message</button>
+      </form>
+    </div>
+
+    <div class="goals">
+      <h2>My Goals</h2>
+      <ul>
+        <li>Lessen procrastination</li>
+        <li>Graduate in my studies</li>
+        <li>Learn more about programming</li>
+        <li>Improve problem-solving skills</li>
+        <li>Travel around the world</li>
+      </ul>
+
+      <div class="group-comment">
+        <h2>Comments</h2>
+        <p>I hope you reach all your goals! - Durante</p>
+        <p>Florido: Wow!</p>
+        <p>
+          These goals are great and show a strong desire to grow and learn! -
+              Riomalos's Comment
+        </p>
+      <button id="sort_button">Sort by Date (Ascending)</button>
+      </div>
+
+      <h2>Comment here!</h2>
+      <form class="comment-form">
+        <input type="text" id="comment_name" placeholder="Name" required/>
+        <textarea
+            id="comment_text"
+            rows="3"
+            placeholder="Comment"
+            required></textarea>
+        <button type="button" id="comment_button" disabled>Comment</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

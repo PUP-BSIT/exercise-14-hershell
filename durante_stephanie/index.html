@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="style.css" rel="stylesheet"/>
+    <title>Durante Stephanie</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>Durante Stephanie</h1>
+    </div>
+
+    <div class="interest">
+      <h2>My Interest and hobbies</h2>
+      <ul>
+        <li>Singing</li>
+        <li>Drawing</li>
+        <li>Playing games</li>
+        <li>Listening to music</li>
+        <li>Playing Instrument</li>
+      </ul>
+    </div>
+
+    <div class="works">
+      <h2>My works</h2>
+      <ol>
+        <li><a href="./work1.html">Work 1</a></li>
+        <li><a href="./work2.html">Work 2</a></li>
+        <li><a href="./work3.html">Work 3</a></li>
+        <li><a href="./work4.html">Work 4</a></li>
+        <li><a href="./work5.html">Work 5</a></li>
+      </ol>
+    </div>
+
+    <div class="testimonials">
+      <h2>Testimonials</h2>
+      <p>
+        Florido: Stephanie is a deeply empathetic and caring individual who
+            notices the small details that make others feel seen, valued, and
+            truly understood.
+      </p>
+      <p>Stephanie is a great friend and always supportive! -Riomalos</p>
+      <p>Durante's coding have great reliability and focus. -Siervo</p>
+    </div>
+
+    <div class="gallery">
+      <h2>Gallery</h2>
+      <img src="images/picture.jpg" alt="image"/>
+      <img src="images/picture.jpg" alt="image"/>
+      <img src="images/picture.jpg" alt="image"/>
+      <img src="images/picture.jpg" alt="image"/>
+      <img src="images/picture.jpg" alt="image"/>
+      <img src="images/picture.jpg" alt="image"/>
+    </div>
+
+    <div class="goals">
+      <h2>My Goals</h2>
+      <ul>
+        <li>To Graduate</li>
+        <li>Get a Job</li>
+        <li>To Travel</li>
+      </ul>
+    </div>
+
+    <div class="comment-section">
+      <h2>Comment Section</h2>
+      <select id="sort_type">
+        <option value="ascending">Ascending</option>
+        <option value="descending">Descending</option>
+      </select>
+      <ul id="comment_list"></ul>
+    </div>
+
+    <div class="add-comment">
+      <h2>Add a Comment</h2>
+      <form>
+        <div>
+          <label for="comment_name">Name</label>
+          <input id="comment_name" name="name" type="text" placeholder="Name"/>
+        </div>
+        <div>
+          <label for="comment_form">Comment</label>
+          <textarea
+              id="comment_form"
+              name="comment"
+              rows="7"
+              placeholder="Comment"></textarea>
+        </div>
+        <div>
+          <button type="button" id="comment_button" disabled>Comment</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-form">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="full-name">Full Name</label>
+        <div class="name-container">
+          <input type="text" name="first-name" placeholder="First Name"/>
+          <input type="text" name="last-name" placeholder="Last Name"/>
+        </div>
+
+        <div class="email">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="example@example.com"/>
+        </div>
+
+        <div class="message">
+          <label for="message">Message</label>
+          <textarea
+              id="message"
+              rows="5"
+              placeholder="Type your message..."></textarea>
+        </div>
+        <button type="submit">submit</button>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
