@@ -38,4 +38,14 @@ function displayCountryDetails(country) {
             <p><strong>Population:</strong> ${formattedPopulation}</p>
             <p><strong>Languages:</strong>
                 ${Object.values(country.languages).join(", ")}</p>`;
-  }
+}
+
+function fetchRegionCountries(region) {
+    const regionUrl = `https://restcountries.com/v3.1/region/${region}`;
+  
+    fetch(regionUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        displayRegionCountries(data);
+      });
+}
