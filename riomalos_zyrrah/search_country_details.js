@@ -49,3 +49,35 @@ function fetchRegionCountries(region) {
         displayRegionCountries(data);
       });
 }
+
+function displayRegionCountries(countries) {
+    const regionCountriesDiv = document.getElementById("region_countries");
+    const countryNames = countries.map((country) => country.name.common);
+
+    regionCountriesDiv.innerHTML = '';
+
+    const outputContainer = document.createElement("div");
+    outputContainer.className = "country-output";
+
+    const maxLines = 5;
+    const countriesPerLine = Math.ceil(countryNames.length / maxLines);
+
+    for (let index = 0; index < maxLines; index++) {
+      const rowCountries = countryNames
+            .slice(index * countriesPerLine, (index + 1) * countriesPerLine);
+
+      const lineDiv = document.createElement("div");
+      lineDiv.className = "country-line";
+
+      rowCountries.forEach(country => {
+        const countryItem = document.createElement("span");
+        countryItem.className = "country-item";
+        countryItem.textContent = `• ${country}`;
+        lineDiv.appendChild(countryItem);
+      });
+
+      outputContainer.appendChild(lineDiv);
+    }
+
+    regionCountriesDiv.appendChild(outputContainer);
+}
