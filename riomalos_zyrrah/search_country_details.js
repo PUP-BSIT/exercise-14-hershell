@@ -23,3 +23,19 @@ function searchCountry() {
         document.getElementById("region_countries").innerHTML = "";
       });
 }
+
+function displayCountryDetails(country) {
+    const countryDetailsDiv = document.getElementById("country_details");
+    const formattedPopulation = new Intl.NumberFormat()
+        .format(country.population);
+
+    countryDetailsDiv.innerHTML = `
+            <p><img src="${country.flags.png}" alt="Flag of 
+                ${country.name.common}" width="100"></p>
+            <p><strong>Name:</strong> ${country.name.common}</p>
+            <p><strong>Capital:</strong> ${
+                country.capital ? country.capital[0] : "N/A"}</p>
+            <p><strong>Population:</strong> ${formattedPopulation}</p>
+            <p><strong>Languages:</strong>
+                ${Object.values(country.languages).join(", ")}</p>`;
+  }
