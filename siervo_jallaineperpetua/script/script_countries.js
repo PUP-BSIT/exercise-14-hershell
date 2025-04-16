@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loadingIndicator.style.display = "block";
 
     fetch(`https://restcountries.com/v3.1/name/${query}`)
-      .then((response) => {
+        .then((response) => {
         if (!response.ok) throw new Error("Country not found");
         return response.json();
       })
