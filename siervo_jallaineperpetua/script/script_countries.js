@@ -42,19 +42,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 const country = data[0];
                 displayCountryDetails(country);
 
-                return fetch(`https://restcountries.com/v3.1/region/
-                    ${country.region}`);
+                return fetch(
+                    `https://restcountries.com/v3.1/region/${country.region}`
+                );
             })
             .then((response) => response.json())
             .then((regionData) => {
                 displayRegionCountries(regionData);
                 loadingIndicator.style.display = "none";
             })
-            .catch((error) => {
+            .catch(() => {
                 loadingIndicator.style.display = "none";
                 errorMessage.style.display = "block";
                 errorMessage.textContent =
-                    "Country not found. Please try a different search";
+                    "Country not found. Please try a different search term.";
             });
     }
 
@@ -65,8 +66,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (country.name.nativeName) {
             const key = Object.keys(country.name.nativeName)[0];
-            elements.nativeName.textContent = `Native name: 
-                ${country.name.nativeName[key].common}`;
+            elements.nativeName.textContent = `Native name: ${
+                country.name.nativeName[key].common
+            }`;
         } else {
             elements.nativeName.textContent = "";
         }
@@ -104,22 +106,23 @@ document.addEventListener("DOMContentLoaded", function () {
     function displayRegionCountries(countries) {
         countriesGrid.innerHTML = "";
 
-        countries.sort((a, b) => a.name.common.localeCompare
-            (b.name.common));
+        countries.sort((a, b) =>
+            a.name.common.localeCompare(b.name.common)
+        );
 
         const currentCountryName = elements.name.textContent;
         const filteredCountries = countries
-            .filter((country) => country.name.common
-                !== currentCountryName)
+            .filter(
+                (country) => country.name.common !== currentCountryName
+            )
             .slice(0, 15);
 
         filteredCountries.forEach((country) => {
             const countryCard = document.createElement("div");
             countryCard.className = "country-card";
 
-            countryCard.innerHTML =
-                `<img src="${country.flags.png}" alt="Flag of
-                    ${country.name.common}">
+            countryCard.innerHTML = `<img src="${country.flags.png}" 
+                alt="Flag of ${country.name.common}">
                 <div class="country-card-info">
                     <h3>${country.name.common}</h3>
                     <p>${country.capital ? country.capital[0] : "N/A"}</p>
