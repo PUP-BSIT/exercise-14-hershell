@@ -64,7 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (country.name.nativeName) {
       const key = Object.keys(country.name.nativeName)[0];
-      elements.nativeName.textContent = `Native name: ${country.name.nativeName[key].common}`;
+      elements.nativeName.textContent =
+        `Native name: ${country.name.nativeName[key].common}`;
     } else {
       elements.nativeName.textContent = "";
     }
