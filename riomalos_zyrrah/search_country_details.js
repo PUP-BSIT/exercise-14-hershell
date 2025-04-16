@@ -1,7 +1,7 @@
 function searchCountry() {
     const countryName = document.getElementById("country_input").value;
     const countryUrl = `https://restcountries.com/v3.1/name/${countryName}`;
-  
+
     fetch(countryUrl)
       .then((response) => {
         if (!response.ok) {
@@ -12,14 +12,13 @@ function searchCountry() {
       .then((data) => {
         const country = data[0];
         displayCountryDetails(country);
-  
+
         const region = country.region;
         fetchRegionCountries(region);
       })
       .catch((error) => {
-        document.getElementById(
-          "country_details"
-        ).innerHTML = `<p>${error.message}</p>`;
+        document.getElementById("country_details")
+            .innerHTML = `<p>${error.message}</p>`;
         document.getElementById("region_countries").innerHTML = "";
       });
 }
@@ -30,19 +29,19 @@ function displayCountryDetails(country) {
         .format(country.population);
 
     countryDetailsDiv.innerHTML = `
-            <p><img src="${country.flags.png}" alt="Flag of 
-                ${country.name.common}" width="100"></p>
-            <p><strong>Name:</strong> ${country.name.common}</p>
-            <p><strong>Capital:</strong> ${
-                country.capital ? country.capital[0] : "N/A"}</p>
-            <p><strong>Population:</strong> ${formattedPopulation}</p>
-            <p><strong>Languages:</strong>
-                ${Object.values(country.languages).join(", ")}</p>`;
+        <p><img src="${country.flags.png}" alt="Flag of 
+            ${country.name.common}" width="100"></p>
+        <p><strong>Name:</strong> ${country.name.common}</p>
+        <p><strong>Capital:</strong> ${
+            country.capital ? country.capital[0] : "N/A"}</p>
+        <p><strong>Population:</strong> ${formattedPopulation}</p>
+        <p><strong>Languages:</strong>
+            ${Object.values(country.languages).join(", ")}</p>`;
 }
 
 function fetchRegionCountries(region) {
     const regionUrl = `https://restcountries.com/v3.1/region/${region}`;
-  
+
     fetch(regionUrl)
       .then((response) => response.json())
       .then((data) => {
