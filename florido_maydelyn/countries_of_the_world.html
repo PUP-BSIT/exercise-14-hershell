@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>countries of the world</title>
+    <link rel="stylesheet" href="./style.css"/>
+  </head>
+
+  <body>
+    <div id="container">
+      <h1>Countries of the World</h1>
+      <div id="search_box">
+        <input 
+            type="text" 
+            id="keyword" 
+            placeholder="Enter country name" 
+            required/>
+
+        <button onclick="searchCountry()">Search</button>
+      </div>
+
+      <div id="warning_container"></div>
+      
+      <div id="output">
+        <div id="country_details"></div>
+        <div id="countries_in_same_region"></div>
+      </div>
+    </div>
+    <script src="./script/countries_of_the_world.js"></script>
+  </body>
+</html>
