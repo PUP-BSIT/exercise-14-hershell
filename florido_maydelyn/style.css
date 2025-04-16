@@ -293,6 +293,82 @@ button {
   color: rgb(160, 160, 160);
 }
 
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+#container > h1 {
+  color: rgb(160, 160, 160);
+  font-size: 70px;
+  margin: 0px;
+  border-bottom: 5px solid rgb(160, 160,160);
+  padding: 40px;
+  width: calc(100% - 80px);
+  text-align: center;
+}
+
+#search_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 5px;
+  width: 90%;
+}
+
+#search_box > button {
+  width: 20%;
+  margin-top: 10px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+#search_box > input {
+  border: 0px;
+  border-radius: 5px 0px 0px 5px;
+}
+
+#output {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: rgb(160, 160,160);
+  width: 100%;
+  margin-top: 20px;
+}
+
+#country_details, #countries_in_same_region {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 40%;
+}
+
+.show-border {
+  border: 1px solid;
+}
+
+#countries_in_same_region ul {
+  column-count: 3;
+  column-gap: 20px;
+  padding-left: 20px;
+}
+
+#warning_container {
+  color: red;
+  margin-top: 10px;
+  display: flex;
+  width: 90%;
+}
+
+#output > p {
+  width: 90%;
+  text-align: left;
+}
+
 @media (max-width: 426px) {
   body {
     font-size: 15px;
@@ -379,5 +455,44 @@ button {
 
   .comment-form {
     width: calc(100% - 40px);
+  }
+
+  #container {
+    padding: 0px;
+  }
+
+  #container > h1 {
+    font-size: 30px;
+    padding: 20px;
+    border-bottom: 2px solid rgb(160, 160,160);
+    width: calc(100% - 40px);
+  }
+
+  #search_box {
+    width: 100%;
+    align-items: stretch;
+  }
+
+  #search_box > button {
+    margin-top: 5px;
+  }
+
+  #output {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #country_details, #countries_in_same_region {
+    padding: 20px;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  #countries_in_same_region ul {
+    column-count: 2;
+  }
+
+  #country_details > p {
+    text-align: left;
   }
 }
