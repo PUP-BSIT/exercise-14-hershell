@@ -1,5 +1,3 @@
-const submit = document.getElementById("button");
-
 function searchCountry() {
   const txtBox = document.getElementById("country_input").value;
 
@@ -35,9 +33,7 @@ function searchCountry() {
         region: country.region,
         flag: country.flags.png,
       };
-
       let region = country.region;
-      
       const call = `https://restcountries.com/v3.1/region/${region}`;
       return fetch(call)
         .then(function (response) {
@@ -51,8 +47,7 @@ function searchCountry() {
       const { countryInfo, regionData } = countryData;
       document.getElementById("country_details").innerHTML = `
             <h3>Country Information</h3>
-            <img src="${countryInfo.flag}" alt="Flag of ${
-                  countryInfo.name}"/>
+            <img src="${countryInfo.flag}" alt="Flag of ${countryInfo.name}"/>
             <p>Country Name: ${countryInfo.name}</p>
             <p>Population: ${countryInfo.population}</p>
             <p>Area: ${countryInfo.area}</p>
@@ -73,7 +68,6 @@ function searchCountry() {
                 </div>`;
         })
         .join("");
-        
       document.getElementById("countries_in_region").innerHTML = `
             <h3 class="region-title">Countries in the Same Region</h3>
             <div class="countries-container">
@@ -81,10 +75,8 @@ function searchCountry() {
             </div>`;
     })
     .catch(function () {
-      document.getElementById(
-            "country_details").innerHTML = `<p>Country not found</p>`;
+      document.getElementById("country_details")
+          .innerHTML = `<p>Country not found</p>`;
       document.getElementById("countries_in_region").innerHTML = "";
     });
 }
-
-submit.addEventListener("click", searchCountry);
