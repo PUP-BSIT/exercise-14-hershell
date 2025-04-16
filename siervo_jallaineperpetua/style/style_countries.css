@@ -1,0 +1,141 @@
+body {
+    background: linear-gradient(rgb(185, 228, 245), rgb(50, 156, 197));
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-box {
+    display: flex;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#country_input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+}
+
+#search_button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+#error_message {
+    color: red;
+    text-align: center;
+    margin: 10px 0;
+    display: none;
+}
+
+#loading {
+    text-align: center;
+    margin: 10px 0;
+    display: none;
+}
+
+.country-details {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.country-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.flag {
+    width: 100px;
+    margin-right: 20px;
+    border: 1px solid #ddd;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.info-item {
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.info-item h3 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.region-countries {
+    display: none;
+    margin-top: 20px;
+}
+
+.countries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.country-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.country-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.country-card-info {
+    padding: 10px;
+}
+
+.home-button {
+    display: block;
+    margin: 20px auto;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+@media (max-width: 600px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
