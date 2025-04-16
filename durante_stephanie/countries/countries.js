@@ -33,7 +33,9 @@ function searchCountry() {
         region: country.region,
         flag: country.flags.png,
       };
+
       let region = country.region;
+
       const call = `https://restcountries.com/v3.1/region/${region}`;
       return fetch(call)
         .then(function (response) {
@@ -68,6 +70,7 @@ function searchCountry() {
                 </div>`;
         })
         .join("");
+
       document.getElementById("countries_in_region").innerHTML = `
             <h3 class="region-title">Countries in the Same Region</h3>
             <div class="countries-container">
