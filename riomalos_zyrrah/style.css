@@ -11,6 +11,12 @@ body {
   padding: 10px;
 }
 
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+  margin: 0;
+}
+
 h2 {
   font-style: italic;
   text-align: center;
@@ -47,9 +53,24 @@ a {
 }
 
 .contact-container,
-.goal-section {
+.goal-section,
+#country_details,
+#region_countries  {
   border: 1px solid;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: rgba(197, 82, 201, 0.274);
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -94,12 +115,21 @@ fieldset {
   color: black;
 }
 
+.search-container input {
+  width: 30%;
+  padding: 0.75rem;
+  margin: 5px 0px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
 .for-copy {
   display: flex;
 }
 
 .sort-buttons button,
-.contact-container form button {
+.contact-container form button,
+.search-container button {
   padding: 0.75rem;
   background-color: #4d3158;
   color: white;
@@ -136,6 +166,24 @@ fieldset {
   background: #e8b9dff8;
   border-left: 10px solid #c921f3;
   border-radius: 5px;
+}
+
+#region_countries {
+  margin: 20px;
+}
+
+.country-output {
+  display: flex;
+  flex-direction: column;
+}
+
+.country-line {
+  margin-bottom: 10px;
+}
+
+.country-item {
+  margin-right: 10px;
+  font-size: 16px;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -188,6 +236,7 @@ fieldset {
     padding: 0.5rem;
     width: 100%;
   }
+
 }
 
 @media (min-width: 481px) and (max-width: 776px) {
